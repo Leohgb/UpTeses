@@ -8,4 +8,4 @@ https://www.youtube.com/watch?v=LLqq6FemMNQ&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndm
 ## Como funciona
 
 É um sistema que permite os usuarios se cadastrarem e realizarem login no sistema
-para que possam postar teses que ficaram visiveis para outros usuarios.
+para que possam postar teses que ficarão visíveis para outros usuarios.
