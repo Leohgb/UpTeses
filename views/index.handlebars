@@ -1,0 +1,33 @@
+<div class="bg-dark bg-gradient text-white p-5 rounded m-3">
+  <h1 class="display-4">Bem-vindo a Postagem de Teses</h1>
+  <p class="lead">Faça sua publicação</p>
+  <hr class="my-4">
+  <p>Utilize o site para publicar e vizualizar Teses</p>
+  <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie uma conta</a>
+</div>
+
+<h2>Postagens recentes</h2>
+  <hr>
+  
+  {{#if postagens}}
+  <!--Limitando a quantidade de postagens-->
+{{#each (limit postagens 4)}}
+<div class="card mt-4 mb-4">
+  <div class="card-body shadow-sm">
+    <h3>{{titulo}}</h3>
+     <p>{{descricao}}</p>
+       <a href="/Postagem/{{slug}}"><button class="btn btn-success">Leia Mais</button></a>
+      <hr>
+     <small>Categoria: {{categoria.nome}}</small><br>
+    <small>Data de publicação: {{data}}</small>
+  </div>
+  
+</div>
+
+{{/each}}
+    <div class="col text-center mb-3 ">
+       <a href="/Postagens"><button class="btn btn-outline-success btn-lg">Ver mais</button></a>
+      </div>    
+    {{else}}
+  <h5 class="mt-4 mb-2">Nenhuma Postagem</h5>
+{{/if}}
