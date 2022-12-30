@@ -1,4 +1,4 @@
-#📄 UpTeses 📄
+# 📄 UpTeses 📄
 
 Repositório com o código feito em Nodejs e utilizando handlebars.<br>
 A estrutura e bases do repositório foram feitas com base no curso <br>
