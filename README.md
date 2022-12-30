@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=LLqq6FemMNQ&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndm
 E pode ser acessado e utilizado no link abaixo 👇<br>
 https://uploadteses.onrender.com
 
-## Como funciona
+## Como funciona 🤔
 
 É um sistema que permite os usuarios se cadastrarem e realizarem login no sistema
 para que possam postar teses que ficarão visíveis para outros usuarios.
