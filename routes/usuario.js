@@ -119,29 +119,30 @@ router.get("/postagens/edit/:id", (req,res) =>{
 
 })
 
-router.get("/registro/:confirmacao", (req,res) =>{
-    res.redirect("usuarios/login ")
-})
+Emailconfirm = (req,res) =>{
+    Usuario.findOne({confirmacao: req.params.confirmacao}).then((usuario) => {
 
-router.post("/registro/:confirmacao", (req,res) =>{
+        console.log(req.params.confirmacao)
+        usuario.status = "Active"
 
-    Usuario.findOne({_confirmacao: req.params.confirmacao}).then((usuario) => {
+        usuario.save(function (err) {
+            if(err){
+                req.flash("error_msg","Houve um erro ao Confirmar")
+                res.redirect("/usuarios/login") 
+            }
+            else{
+                req.flash('success_msg', 'Confirmado')
+                res.redirect("/usuarios/login")
+            }
+        });
+}).catch((err) => {
+    console.log(err)
+    req.flash("error_msg","Houve um erro ao Confirmar")
+    res.redirect("/usuarios/login")})
+}
 
-            console.log(req.params.confirmacao)
-            usuario.status = "Active"
-            usuario.save().then(() => {
-            req.flash('success_msg', 'Confirmado')
-            res.redirect("/usuarios/login")
-        }).catch((err) => {
-            console.log(err)
-            req.flash("error_msg","Houve um erro ao Confirmar")
-            res.redirect("/usuarios/login")
-    })
-    }).catch((err) => {
-        console.log(err)
-        req.flash("error_msg","Houve um erro ao Confirmar")
-        res.redirect("/usuarios/login")})
-})
+
+router.get("/registro/:confirmacao", Emailconfirm)
 
 router.post("/postagem/edit", (req,res) =>{
     
