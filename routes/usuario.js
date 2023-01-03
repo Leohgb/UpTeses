@@ -31,7 +31,7 @@ router.post("/registro", (req,res) =>{
     if(!req.body.email || typeof req.body.email == undefined || req.body.email ==null){
         erros.push({texto: "E-mail inválido"})
     }
-
+    
     if(!req.body.senha || typeof req.body.senha == undefined || req.body.senha ==null){
         erros.push({texto: "Senha inválido"})
     }
