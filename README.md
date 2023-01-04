@@ -11,4 +11,3 @@ para que possam postar teses que ficarão visíveis para outros usuarios.
 
 E pode ser acessado e utilizado no link abaixo 👇<br>
 https://uploadteses.onrender.com
-
