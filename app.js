@@ -60,7 +60,7 @@ app.use(morgan("dev"));
         }
         try{
             //Conetar ao mongodb atlas 
-        mongoose.connect("mongodb").then(() => {
+        mongoose.connect(`${process.env.MONGODB_URI}`).then(() => {
             console.log("Conectado ao mongo")
         }).catch((err) =>{
             

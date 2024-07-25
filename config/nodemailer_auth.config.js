@@ -1,7 +1,5 @@
 module.exports = {
-    secret: "bezkoder-secret-key",
-    //Colocar endereço de email que irá enviar a mensagem
-    //junto com uma senha de verificação
-    user: "Generico@gmail.com", 
-    pass: "aaaaaaaaaaaaaaaaaa", 
+    secret: `${process.env.NODEMAILER_AUTH_SECRET}`,
+    user: `${process.env.NODEMAILER_AUTH_USER}`, 
+    pass: `${process.env.NODEMAILER_AUTH_PASS}`, 
 }

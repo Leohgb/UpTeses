@@ -226,6 +226,7 @@ router.post("/addpostagem", eUser, multer(multerConfig).single('documentacao'), 
             req.flash("success_msg","Postagem criada com sucesso!")       
             res.redirect("/postagens")
         }).catch((err) => {
+            console.log(err)
             req.flash("error_msg","Houve um erro durante o salvamento da Postagem!")       
             res.redirect("/postagens")
         })
