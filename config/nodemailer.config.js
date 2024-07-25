@@ -26,7 +26,7 @@ module.exports.sendConfirmationEmail = (name, email, confirmacao) => {
           <h2>Olá ${name}</h2>
           
           <p>Obrigado por criar uma conta. Por favor confirme seu Email clicando no link abaixo</p>
-          <a href="http://localhost:8081/usuarios/registro/${confirmacao}" type='submit' style="margin-top:5px; cursor: pointer;
+          <a href="https://upteses.onrender.com/usuarios/registro/${confirmacao}" type='submit' style="margin-top:5px; cursor: pointer;
           border-color:#17a2b8;  text-decoration: none;
           border: 1px solid transparent; background-color:#17a2b8; 
           color:#fff; border-radius: 0.25rem; font-size: 1rem;
